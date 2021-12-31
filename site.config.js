@@ -18,6 +18,7 @@ module.exports = {
 
   // social usernames (optional)
   twitter: 'josmanproudinat',
+  instagram: 'josmanproudinat',
   // github: 'transitive-bullshit',
   // linkedin: 'fisch2',
 

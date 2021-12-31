@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { FaTwitter, FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaTwitter, FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa'
 import { IoSunnyOutline, IoMoonSharp } from 'react-icons/io5'
 import * as config from 'lib/config'
 
@@ -41,6 +41,18 @@ export const Footer: React.FC<{
       ) : null}
 
       <div className={styles.social}>
+        {config.instagram && (
+          <a
+            className={styles.instagram}
+            href={`https://instagram.com/${config.instagram}`}
+            title={`Instagram @${config.twitter}`}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <FaInstagram />
+          </a>
+        )}
+
         {config.twitter && (
           <a
             className={styles.twitter}
