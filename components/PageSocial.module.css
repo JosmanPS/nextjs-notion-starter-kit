@@ -79,6 +79,13 @@
   border-color: #3b5998;
 }
 
+.instagram .actionBgPane {
+  background: #833AB4;
+}
+.instagram:hover {
+  border-color: #833AB4;
+}
+
 .twitter .actionBgPane {
   background: #2795e9;
 }
