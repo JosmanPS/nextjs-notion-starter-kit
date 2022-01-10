@@ -11,7 +11,7 @@ export default function MailchimpForm() {
       </p>
       <Mailchimp
         className='mailchimp-form'
-        action={`https://${process.env.MAILCHIMP_USER}.us16.list-manage.com/subscribe/post?u=${process.env.MAILCHIMP_U}&amp;id=${process.env.MAILCHIMP_ID}`}
+        action={process.env.MAILCHIMP_ACTION_URL}
         fields={[
           {
             name: 'FNAME',
