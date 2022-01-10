@@ -11,7 +11,7 @@ export default function MailchimpForm() {
       </p>
       <Mailchimp
         className='mailchimp-form'
-        action={process.env.MAILCHIMP_ACTION_URL}
+        action={process.env.NEXT_PUBLIC_MAILCHIMP_ACTION_URL}
         fields={[
           {
             name: 'FNAME',
