@@ -35,6 +35,7 @@ import { PageSocial } from './PageSocial'
 import { ReactUtterances } from './ReactUtterances'
 
 import styles from './styles.module.css'
+import MailchimpForm from './MailchimpForm'
 
 // const Code = dynamic(() =>
 //   import('react-notion-x').then((notion) => notion.Code)
@@ -140,6 +141,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
 
   let comments: React.ReactNode = null
   let pageAside: React.ReactChild = null
+  let subscribeForm: React.ReactNode = null
 
   // only display comments and page actions on blog post pages
   if (isBlogPost) {
@@ -153,6 +155,8 @@ export const NotionPage: React.FC<types.PageProps> = ({
         />
       )
     }
+
+    subscribeForm = <MailchimpForm />
 
     const tweet = getPageTweet(block, recordMap)
     if (tweet) {
@@ -269,7 +273,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
         mapPageUrl={siteMapPageUrl}
         mapImageUrl={mapNotionImageUrl}
         searchNotion={searchNotion}
-        pageFooter={comments}
+        pageFooter={subscribeForm}
         pageAside={pageAside}
         footer={
           <Footer
@@ -278,7 +282,6 @@ export const NotionPage: React.FC<types.PageProps> = ({
           />
         }
       />
-
     </TwitterContextProvider>
   )
 }
