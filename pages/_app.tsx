@@ -27,6 +27,7 @@ import 'styles/notion.css'
 import 'styles/prism-theme.css'
 
 import 'styles/mailchimp.css'
+import 'styles/getrevue.css'
 
 // here we're bringing in any languages we want to support for
 // syntax highlighting via Notion's Code block

@@ -33,9 +33,10 @@ import { PageActions } from './PageActions'
 import { Footer } from './Footer'
 import { PageSocial } from './PageSocial'
 import { ReactUtterances } from './ReactUtterances'
+// import MailchimpForm from './MailchimpForm'
+import GetRevueForm from './GetRevueForm'
 
 import styles from './styles.module.css'
-import MailchimpForm from './MailchimpForm'
 
 // const Code = dynamic(() =>
 //   import('react-notion-x').then((notion) => notion.Code)
@@ -156,7 +157,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
       )
     }
 
-    subscribeForm = <MailchimpForm />
+    subscribeForm = <GetRevueForm />
 
     const tweet = getPageTweet(block, recordMap)
     if (tweet) {
@@ -273,7 +274,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
         mapPageUrl={siteMapPageUrl}
         mapImageUrl={mapNotionImageUrl}
         searchNotion={searchNotion}
-        pageFooter={subscribeForm}
+        pageFooter={[comments, subscribeForm]}
         pageAside={pageAside}
         footer={
           <Footer
